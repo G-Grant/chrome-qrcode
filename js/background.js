@@ -4,6 +4,8 @@ chrome.runtime.onInstalled.addListener(() => {
         chrome.pageAction.show(tabId);
     })
     chrome.tabs.onActivated.addListener((activeInfo)=>{
-        chrome.storage.sync.set({activeInfo: activeInfo})
+        chrome.tabs.get(activeInfo.tabId, (tab)=>{
+            chrome.storage.sync.set({url: tab.url})
+        })
     })
 })
