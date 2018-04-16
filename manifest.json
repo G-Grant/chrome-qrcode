@@ -1,0 +1,25 @@
+{
+    "name": "二维码生成器",
+    "version": "1.0.0",
+    "description": "二维码生成器",
+    "manifest_version": 2,
+    "author": "Grant",
+    "icons": {
+        "16": "./img/qrcode.png",
+        "48": "./img/qrcode.png",
+        "128": "./img/qrcode.png"
+    },
+    "background": {
+        "scripts": ["js/background.js"],
+        "persistent": false
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "./img/qrcode.png",
+            "24": "./img/qrcode.png",
+            "32": "./img/qrcode.png"
+        }
+    },
+    "permissions": ["storage", "tabs", "storage", "activeTab"]
+}
